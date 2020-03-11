@@ -33,16 +33,16 @@ const Landing = () => {
 
   return (
     <div>
-      {console.log(results)}
       <label>
         Search
         <input type='text' name='search' value={query} onChange={(e) => handleChange(e)} placeholder='Artist, Song' />
       </label>
       <button type='submit' onClick={(e) => onSubmit(e)}>Search</button>
 
-      {results && results.map(result => (
-        <div>
-          {result}
+      {results && results.map((result, index) => (
+        <div key={Date.now()+index}>
+          <h1>{result.snippet.title}</h1>
+          <img src={result.snippet.thumbnails.medium.url} alt={result.snippet.description} />
         </div>
       ))}
     </div>
