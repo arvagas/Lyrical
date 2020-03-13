@@ -1,7 +1,7 @@
 // library imports
 import React from 'react'
 // component imports
-import AppRouter from './components/AppRouter'
+import AppRouter from './components/router/AppRouter'
 
 const App = () => {
   return (
