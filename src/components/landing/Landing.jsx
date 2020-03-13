@@ -13,22 +13,23 @@ const Landing = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    // search for input via youtube api
-      // create search
+    // create search
     let url = new URL('https://www.googleapis.com/youtube/v3/search')
     url.search = new URLSearchParams({
       part: 'snippet',
       q: query,
+      type: 'video',
       maxResults: 5,
       key: process.env.REACT_APP_YOUTUBE_API_KEY
     })
-      // execute search
+
+    // execute search
     fetch(url)
-    .then(res => res.json())
-    .then(res => {
-      setResults(res.items)
-      setQuery('')
-    })
+      .then(res => res.json())
+      .then(res => {
+        setResults(res.items)
+        setQuery('')
+      })
   }
 
   return (
