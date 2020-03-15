@@ -1,7 +1,7 @@
 // library imports
 import React, { useState } from 'react'
 // component imports
-import VideoCard from './VideoCard'
+import VideoCard from '../video/VideoCard'
 
 const Landing = () => {
   const [query, setQuery] = useState('')
