@@ -4,7 +4,7 @@ import { Switch, Route, useLocation } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import ReactGA from 'react-ga'
 // component imports
-import Landing from './landing/Landing'
+import Landing from '../landing/Landing'
 
 // initialize google analytics
 ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID)
