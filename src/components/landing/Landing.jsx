@@ -42,10 +42,7 @@ const Landing = () => {
       <button type='submit' onClick={(e) => onSubmit(e)}>Search</button>
 
       {results && results.map((result, index) => (
-        <div key={Date.now()+index}>
-          <h1>{result.snippet.title}</h1>
-          <img src={result.snippet.thumbnails.medium.url} alt={result.snippet.description} />
-        </div>
+        <VideoCard key={Date.now()+index} video={result} />
       ))}
     </div>
   )
